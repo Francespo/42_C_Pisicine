@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fesposit <fesposit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 21:38:38 by fesposit          #+#    #+#             */
-/*   Updated: 2026/03/12 21:44:35 by fesposit         ###   ########.fr       */
+/*   Updated: 2026/03/13 10:04:25 by fesposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_is_negative(int n){
-	char c;
+void	ft_is_negative(int n)
+{
+	char	c;
+
 	if (n < 0)
 		n = 'N';
 	else

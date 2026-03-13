@@ -6,12 +6,13 @@
 /*   By: fesposit <fesposit@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 20:50:55 by franc             #+#    #+#             */
-/*   Updated: 2026/03/12 21:21:59 by fesposit         ###   ########.fr       */
+/*   Updated: 2026/03/13 09:59:44 by fesposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putchar(char c){
+void	ft_putchar(char c)
+{
 	write(1, &c, 1);
 }

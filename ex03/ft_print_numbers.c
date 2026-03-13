@@ -6,12 +6,13 @@
 /*   By: fesposit <fesposit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 21:26:45 by fesposit          #+#    #+#             */
-/*   Updated: 2026/03/12 21:28:23 by fesposit         ###   ########.fr       */
+/*   Updated: 2026/03/13 10:02:41 by fesposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_print_numbers(void){
+void	ft_print_numbers(void)
+{
 	write(1, "0123456789", 10);
 }

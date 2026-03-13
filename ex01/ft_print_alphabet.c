@@ -6,12 +6,13 @@
 /*   By: fesposit <fesposit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 21:04:13 by fesposit          #+#    #+#             */
-/*   Updated: 2026/03/12 21:13:25 by fesposit         ###   ########.fr       */
+/*   Updated: 2026/03/13 10:00:52 by fesposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_print_alphabet(void){
+void	ft_print_alphabet(void)
+{
 	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
 }
