@@ -6,7 +6,7 @@
 /*   By: fesposit <fesposit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 21:38:38 by fesposit          #+#    #+#             */
-/*   Updated: 2026/03/13 10:04:25 by fesposit         ###   ########.fr       */
+/*   Updated: 2026/03/15 14:56:54 by fesposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	ft_is_negative(int n)
 	char	c;
 
 	if (n < 0)
-		n = 'N';
+		c = 'N';
 	else
-		n = 'P';
-	write(1, n, 1);
+		c = 'P';
+	write(1, &c, 1);
 }
