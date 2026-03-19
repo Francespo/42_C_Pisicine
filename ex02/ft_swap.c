@@ -6,13 +6,13 @@
 /*   By: fesposit <fesposit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 18:23:05 by fesposit          #+#    #+#             */
-/*   Updated: 2026/03/18 18:28:46 by fesposit         ###   ########.fr       */
+/*   Updated: 2026/03/19 18:18:40 by fesposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_swap(int *a, int *b)
 {
-	int t;
+	int	t;
 
 	t = *a;
 	*a = *b;

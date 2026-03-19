@@ -6,14 +6,14 @@
 /*   By: fesposit <fesposit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/18 18:32:50 by fesposit          #+#    #+#             */
-/*   Updated: 2026/03/18 18:38:33 by fesposit         ###   ########.fr       */
+/*   Updated: 2026/03/19 18:17:22 by fesposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int		d;
-	intm;
+	int	d;
+	int	m;
 
 	d = *a / *b;
 	m = *a % *b;

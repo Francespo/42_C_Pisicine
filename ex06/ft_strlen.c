@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fesposit <fesposit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/18 18:19:28 by fesposit          #+#    #+#             */
-/*   Updated: 2026/03/19 18:20:25 by fesposit         ###   ########.fr       */
+/*   Created: 2026/03/19 19:29:00 by fesposit          #+#    #+#             */
+/*   Updated: 2026/03/19 19:33:43 by fesposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+int	ft_strlen(char *str)
 {
-	int	m;
-	int	d;
+	int	count;
 
-	m = a % b;
-	d = a / b;
-	*div = d;
-	*mod = m;
+	count = 0;
+	while (str[count] != 0)
+	{
+		count++;
+	}
+	return (count);
 }
