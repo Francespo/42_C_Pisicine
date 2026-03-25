@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fesposit <fesposit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/20 00:06:46 by fesposit          #+#    #+#             */
-/*   Updated: 2026/03/20 10:38:30 by fesposit         ###   ########.fr       */
+/*   Created: 2026/03/20 10:41:14 by fesposit          #+#    #+#             */
+/*   Updated: 2026/03/20 11:15:53 by fesposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int	ft_str_is_alpha(char *str)
 {
-	unsigned int	i;
+	int	i;
+	int	is_lcalpha;
+	int	is_ucalpha;
 
 	i = 0;
-	while (i < n && src[i] != 0)
+	while (str[i] != 0)
 	{
-		dest[i] = src[i];
+		is_lcalpha = str[i] >= 'a' && str[i] <= 'z';
+		is_ucalpha = str[i] >= 'A' && str[i] <= 'Z';
+		if (!is_lcalpha && !is_ucalpha)
+		{
+			return (0);
+		}
 		i++;
 	}
-	while (i < n)
-	{
-		dest[i] = 0;
-		i++;
-	}
-	return (dest);
+	return (1);
 }
