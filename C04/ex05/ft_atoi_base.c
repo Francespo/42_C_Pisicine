@@ -38,9 +38,9 @@ int	is_alpha_num(char c)
 	return (is_lcalpha || is_ucalpha || is_number);
 }
 
-int	is_sign(char c)
+int	is_space(char c)
 {
-	return (c == '+' || c == '-');
+	return (c == ' ' || (c >= 9 && c <= 13));
 }
 
 // returns 0 if the base is invalid, the len of the base otherwise
@@ -85,9 +85,9 @@ int	ft_atoi_base(char *str, char *base)
 	i = 0;
 	if (!base_len)
 		return (0);
-	while (str[i] == ' ')
+	while (is_space(str[i]))
 		i++;
-	while (is_sign(str[i]))
+	while (str[i] == '+' || str[i] == '-')
 		if (str[i++] == '-')
 			sign *= -1;
 	pos_in_base = position_in_base(str[i], base);

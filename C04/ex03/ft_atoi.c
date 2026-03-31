@@ -15,9 +15,9 @@ int	is_num(char c)
 	return (c >= '0' && c <= '9');
 }
 
-int	is_sign(char c)
+int	is_space(char c)
 {
-	return (c == '+' || c == '-');
+	return (c == ' ' || (c >= 9 && c <= 13));
 }
 
 int	ft_atoi(char *str)
@@ -29,9 +29,9 @@ int	ft_atoi(char *str)
 	num = 0;
 	sign = 1;
 	i = 0;
-	while (str[i] == ' ')
+	while (is_space(str[i]))
 		i++;
-	while (is_sign(str[i]))
+	while (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
 			sign *= -1;
