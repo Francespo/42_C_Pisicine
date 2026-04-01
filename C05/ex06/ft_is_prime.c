@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fesposit <fesposit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/01 13:06:05 by fesposit          #+#    #+#             */
-/*   Updated: 2026/04/01 13:06:11 by fesposit         ###   ########.fr       */
+/*   Created: 2026/04/01 13:40:18 by fesposit          #+#    #+#             */
+/*   Updated: 2026/04/01 13:40:19 by fesposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	sqrt_binary_search(int n)
+int	ft_is_prime(int nb)
 {
-	int				a;
-	int				b;
-	int				guess;
-	unsigned long	square;
+	int	i;
 
-	a = 0;
-	b = n;
-	while (a <= b)
+	if (nb < 2)
+		return (0);
+	i = 2;
+	while (i * i <= nb)
 	{
-		guess = (a + b) / 2;
-		square = (unsigned long)guess * guess;
-		if (square < (unsigned int)n)
-			a = guess + 1;
-		else if (square > (unsigned int)n)
-			b = guess - 1;
-		else
-			return (guess);
+		if (nb % i == 0)
+			return (0);
+		i++;
 	}
-	return (0);
-}
-
-int	ft_sqrt(int nb)
-{
-	return (sqrt_binary_search(nb));
+	return (1);
 }
