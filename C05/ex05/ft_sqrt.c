@@ -1,21 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_power.c                               :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fesposit <fesposit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/01 10:16:41 by fesposit          #+#    #+#             */
-/*   Updated: 2026/04/01 10:16:43 by fesposit         ###   ########.fr       */
+/*   Created: 2026/04/01 13:06:05 by fesposit          #+#    #+#             */
+/*   Updated: 2026/04/01 13:06:11 by fesposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_recursive_power(int nb, int power)
+int	sqrt_binary_search(int n)
 {
-	if (power < 0)
-		return (0);
-	if (power == 0)
-		return (1);
-	else
-		return (nb * ft_recursive_power(nb, --power));
+	int				a;
+	int				b;
+	int				guess;
+	unsigned long	square;
+
+	a = 0;
+	b = n;
+	while (a <= b)
+	{
+		guess = (a + b) / 2;
+		square = (unsigned long)guess * guess;
+		if (square < n)
+			a = guess + 1;
+		else if (square > n)
+			b = guess - 1;
+		else
+			return (guess);
+	}
+	return (0);
+}
+
+int	ft_sqrt(int nb)
+{
+	return (sqrt_binary_search(nb));
 }
